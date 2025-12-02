@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import dev.giussepr.bookpedia.book.domain.Book
 import dev.giussepr.bookpedia.book.presentation.book_list.components.BookSearchBar
 import dev.giussepr.bookpedia.core.presentation.DarkBlue
+import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
@@ -66,4 +67,31 @@ private fun BookListScreen(
                 .padding(16.dp)
         )
     }
+}
+
+@Preview
+@Composable
+private fun BookListScreenPreview() {
+    val books = (1..100).map {
+        Book(
+            id = it.toString(),
+            title = "Book $it",
+            imageUrl = "https://test.com",
+            authors = listOf("Giussep Ricardo"),
+            description = "Description of $it",
+            languages = emptyList(),
+            firstPublishYear = null,
+            averageRating = 4.67854,
+            ratingCount = 5,
+            numPages = 100,
+            numEditions = 7
+        )
+    }
+
+    BookListScreen(
+        state = BookListState(
+            searchResults = books
+        ),
+        onIntent = {}
+    )
 }
