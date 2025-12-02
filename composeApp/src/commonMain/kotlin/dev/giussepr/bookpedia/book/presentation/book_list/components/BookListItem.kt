@@ -40,6 +40,7 @@ import dev.giussepr.bookpedia.book.domain.Book
 import dev.giussepr.bookpedia.core.presentation.LightBlue
 import dev.giussepr.bookpedia.core.presentation.SandYellow
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.ui.tooling.preview.Preview
 import kotlin.math.round
 
 @Composable
@@ -58,7 +59,9 @@ fun BookListItem(
             modifier = Modifier
                 .padding(16.dp)
                 .fillMaxWidth()
-                .height(IntrinsicSize.Min)
+                .height(IntrinsicSize.Min),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Box(
                 modifier = Modifier
@@ -145,5 +148,29 @@ fun BookListItem(
                     .size(36.dp)
             )
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun BookListItemPreview() {
+    val book = Book(
+        id = "1",
+        title = "Book 1",
+        imageUrl = "https://test.com",
+        authors = listOf("Giussep Ricardo"),
+        description = "Description of book 1",
+        languages = emptyList(),
+        firstPublishYear = null,
+        averageRating = 4.67854,
+        ratingCount = 5,
+        numPages = 100,
+        numEditions = 7
+    )
+    MaterialTheme {
+        BookListItem(
+            book = book,
+            onClick = {}
+        )
     }
 }
