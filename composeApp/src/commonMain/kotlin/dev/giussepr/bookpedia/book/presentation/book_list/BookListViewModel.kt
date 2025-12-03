@@ -44,7 +44,7 @@ class BookListViewModel(
 
     fun onIntent(intent: BookListIntent) {
         when (intent) {
-            is BookListIntent.OnBookClick -> TODO()
+            is BookListIntent.OnBookClick -> {}
             is BookListIntent.OnSearchQueryChange -> {
                 _state.update {
                     it.copy(
