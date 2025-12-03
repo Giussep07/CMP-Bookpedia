@@ -4,6 +4,7 @@ import dev.giussepr.bookpedia.book.data.network.KtorRemoteBookDataSource
 import dev.giussepr.bookpedia.book.data.network.RemoteBookDataSource
 import dev.giussepr.bookpedia.book.data.repository.DefaultBookRepository
 import dev.giussepr.bookpedia.book.domain.BookRepository
+import dev.giussepr.bookpedia.book.presentation.SelectedBookViewModel
 import dev.giussepr.bookpedia.book.presentation.book_list.BookListViewModel
 import dev.giussepr.bookpedia.core.data.HttpClientFactory
 import org.koin.core.module.Module
@@ -20,4 +21,5 @@ val sharedModule = module {
     singleOf(::DefaultBookRepository).bind<BookRepository>()
 
     viewModelOf(::BookListViewModel)
+    viewModelOf(::SelectedBookViewModel)
 }
