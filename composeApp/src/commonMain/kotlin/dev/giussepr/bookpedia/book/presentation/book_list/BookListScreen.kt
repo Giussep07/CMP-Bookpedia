@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -41,6 +42,7 @@ import dev.giussepr.bookpedia.book.presentation.book_list.components.BookList
 import dev.giussepr.bookpedia.book.presentation.book_list.components.BookSearchBar
 import dev.giussepr.bookpedia.core.presentation.DarkBlue
 import dev.giussepr.bookpedia.core.presentation.DesertWhite
+import dev.giussepr.bookpedia.core.presentation.PulseAnimation
 import dev.giussepr.bookpedia.core.presentation.SandYellow
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
