@@ -1,5 +1,8 @@
 package dev.giussepr.bookpedia.di
 
+import androidx.sqlite.driver.bundled.BundledSQLiteDriver
+import dev.giussepr.bookpedia.book.data.database.DatabaseFactory
+import dev.giussepr.bookpedia.book.data.database.FavoritesBookDatabase
 import dev.giussepr.bookpedia.book.data.network.KtorRemoteBookDataSource
 import dev.giussepr.bookpedia.book.data.network.RemoteBookDataSource
 import dev.giussepr.bookpedia.book.data.repository.DefaultBookRepository
@@ -21,6 +24,12 @@ val sharedModule = module {
     singleOf(::KtorRemoteBookDataSource).bind<RemoteBookDataSource>()
     singleOf(::DefaultBookRepository).bind<BookRepository>()
 
+    single {
+        get<DatabaseFactory>().create()
+            .setDriver(BundledSQLiteDriver())
+            .build()
+    }
+    single { get<FavoritesBookDatabase>().favoritesBookDao }
     viewModelOf(::BookListViewModel)
     viewModelOf(::SelectedBookViewModel)
     viewModelOf(::BookDetailViewModel)
