@@ -37,8 +37,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import bookpedia.composeapp.generated.resources.Res
-import bookpedia.composeapp.generated.resources.book_error_2
+import openbookdb.composeapp.generated.resources.Res
+import openbookdb.composeapp.generated.resources.book_error_2
 import coil3.compose.AsyncImagePainter
 import coil3.compose.rememberAsyncImagePainter
 import dev.giussepr.bookpedia.book.domain.Book

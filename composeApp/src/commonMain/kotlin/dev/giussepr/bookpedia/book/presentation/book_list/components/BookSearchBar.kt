@@ -23,9 +23,9 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
-import bookpedia.composeapp.generated.resources.Res
-import bookpedia.composeapp.generated.resources.close_hint
-import bookpedia.composeapp.generated.resources.search_hint
+import openbookdb.composeapp.generated.resources.Res
+import openbookdb.composeapp.generated.resources.close_hint
+import openbookdb.composeapp.generated.resources.search_hint
 import dev.giussepr.bookpedia.core.presentation.DarkBlue
 import dev.giussepr.bookpedia.core.presentation.DesertWhite
 import dev.giussepr.bookpedia.core.presentation.SandYellow

@@ -1,12 +1,12 @@
 package dev.giussepr.bookpedia.core.presentation
 
-import bookpedia.composeapp.generated.resources.Res
-import bookpedia.composeapp.generated.resources.error_disk_full
-import bookpedia.composeapp.generated.resources.error_no_internet
-import bookpedia.composeapp.generated.resources.error_request_timeout
-import bookpedia.composeapp.generated.resources.error_serialization
-import bookpedia.composeapp.generated.resources.error_too_many_requests
-import bookpedia.composeapp.generated.resources.error_unknown
+import openbookdb.composeapp.generated.resources.Res
+import openbookdb.composeapp.generated.resources.error_disk_full
+import openbookdb.composeapp.generated.resources.error_no_internet
+import openbookdb.composeapp.generated.resources.error_request_timeout
+import openbookdb.composeapp.generated.resources.error_serialization
+import openbookdb.composeapp.generated.resources.error_too_many_requests
+import openbookdb.composeapp.generated.resources.error_unknown
 import dev.giussepr.bookpedia.core.domain.DataError
 
 fun DataError.toUiText(): UiText {

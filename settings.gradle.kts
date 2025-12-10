@@ -1,4 +1,4 @@
-rootProject.name = "Bookpedia"
+rootProject.name = "OpenBookDB"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
